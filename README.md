@@ -1,2 +1,2 @@
 # arquivosdosamir
-Arquivos do Samir
+Random stuff I learned with html, css and javascript.
