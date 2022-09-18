@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" async></script>
     <title>Style Me</title>
 </head>
-<body>
+<body id="background">
     <header>
         <div id="curved-corner-topleft"></div>
         <div>Style Me</div>
@@ -16,23 +15,23 @@
         
     </header>
     <h1>
-        <div>The Colors, fonts and background can change with javascript!</div><br>
-        <div>Many many things can change!</div><br>
-        <div>Javascript is awesome!</div><br>
-        <div>Look this!</div>
+        <div class="font1">The Colors, fonts and background can change with javascript!</div><br>
+        <div class="font1">Many many things can change!</div><br>
+        <div class="font1">Javascript is awesome!</div><br>
+        <div class="font1">Look this!</div>
 
     </h1>
     <main>
         <div id="triangle-right"></div>
-        <div>This is another text line!</div>
+        <div class="font1">This is another text line!</div>
         <div id="triangle-left"></div>
     </main>
     <h2>
-        <button>Change Fonts</button>
-        <button>Change Font Colors</button>
-        <button>Change Font Size</button>
-        <button>Change background Color</button>
-        <button>Don't CLick Here!</button>
+        <button onclick="changeFont()" id="change-font">Change Fonts</button>
+        <button onclick="changeColor()" id="change-font-color">Change Font Colors</button>
+        <button onclick="changeFontSize()" id="change-font-size">Change Font Size</button>
+        <button onclick="changeBackgroundColor()" id="change-background">Change background Color</button>
+        <button onclick="dontClick()" id="dont-click">Don't CLick Here!</button>
     </h2>
     <h3>
         <div id="star-five"></div>
@@ -46,6 +45,6 @@
         <div class="footerDiv">All rights reserved and stuff</div>
         <div id="curved-corner-bottomright"></div>
     </Footer>
-    
+    <script src="script.js" async></script>
 </body>
 </html>
