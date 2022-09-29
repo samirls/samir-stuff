@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    font-size: 40px;
+    font-weight:bolder;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #4e65ff, #92effd);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+summary {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    padding-bottom: 30px;
+}
+
+details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+     0% {
+        opacity: 0;
+     }
+     100% {
+        opacity: 1;
+     }
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    width: 100%;
+    border-top: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+
+details summary:after {
+    content:"+";
+    color: black;
+    position: relative;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    transform-origin: center;
+    transition: 900ms linear;
+}
+
+details[open] summary:after {
+    transform: rotate (45deg);
+}
+
+details summary {
+    outline: 0;
+}
+
+details p {
+
+}
+
+p {
+    text-align: justify;
+    width: 1000px;
+
+}
+
+#p1 {
+    margin-bottom: 18px;
+}
+
+#p2 {
+    margin-bottom: 18px;
+}
+
+button {
+    width: 110px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 10px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 30px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #92effd;
+    transform: scale(1.1);
+    transition: 200ms;
+    
+}
+
+button:active {
+  background-color: #4e65ff;
+}
+
+#passosOculto {
+    display: flex;
+    justify-content: center;
+    text-align: justify;    
+    flex-direction: column;
+}
