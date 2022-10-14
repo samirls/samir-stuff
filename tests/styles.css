@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.parent {
+  background-color:aquamarine;
+  min-height: 400px;
+  padding: 80px;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+.child {
+  padding: 30px;
+  background-color: aqua;
+}
