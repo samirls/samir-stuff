@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Speed Typing</title>
+</head>
+<body>
+    <header>
+        <article id="stats" class="hide" >
+            <p class="d-block">Words per minute (WPM): <span id="wpm-display"></span></p>
+            <p class="d-block">Score: <span id="score-display"></span></p>
+            <p class="d-block">
+                Time left: <span id="time-display"></span>
+            </p>
+        </article>
+        <div id="main-heading">
+
+        <h1 >How fast can you type?</h1>
+        <h2>Choose your language:</h2>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="main-section">
+            <!-- typed words go here -->
+            <article id="main-content"></article>
+            <div id="flags">
+                <img id="button" type="submit" src="./img/usa-flag.png"/>
+                <img id="button2" src="./img/brazil-flag.png"/>
+            </div>
+            
+
+
+            <a id="highScoreButton" href="./highscores.html"><button>High Scores</button></a>
+
+            <article id="text-display" ></article>
+
+            <form id="form">
+                <input class="hide" id="input" type="text" />
+            </form>
+            <a href="./index.html" class="hide" id="backButton"><button>Back to Home</button></a>
+        </section>
+    </main>
+    <div id="result" class="hide">
+        <div>Game Over!</div>
+        <div>You have made <span id="wpm-display"></span> words per minute!</div>
+        <div>You have typed <span id="score-display"></span> words!</div>
+        <button id="goBack">Go Back</button>
+
+    </div>
+</body>
+</html>
