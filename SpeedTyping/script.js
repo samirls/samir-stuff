@@ -4,7 +4,7 @@ const joao = `A cidade de João Pessoa nasceu nas margens do rio Sanhauá a part
 
 
 // click on the start game
-const startGameButton = document.getElementById('button');
+const startGameButton = document.getElementById('usaFlag');
 const highScoreButton = document.getElementById("highScoreButton")
 const statsContent = document.getElementById('stats');
 const input = document.getElementById("input");
@@ -16,12 +16,13 @@ const scoreDisplay = document.getElementById("score-display");
 const wpmDisplay = document.getElementById("wpm-display");
 const splittedAlice = alice.split(" ");
 const goBack = document.getElementById("goBack");
+const endScore = document.getElementById("endScore");
 
 const state = {
     currentWord: '',
     score: 0,
     timeElapsed: 0,
-    gameLenght: 30, // 30sec
+    gameLenght: 45, // 30sec
 }
 
 function createWordSpan(color, content) {
@@ -120,13 +121,14 @@ function renderStats() {
     //score
     scoreDisplay.textContent = state.score;
     //wpm
-    wpmDisplay.textContent = (state.score / (state.timeElapsed / 60)).toFixed(1);
+    wpmDisplay.textContent = (state.score / (state.timeElapsed / 60)).toFixed(2);
 }
 
 
-goBack.addEventListener(onclick, goBack);
-
-function goBack() {
+//function to refresh the page
+goBack.addEventListener("click", goBackFirstPage);
+function goBackFirstPage() {
+    document.getElementById("result").className = "hide";
     window.location.reload();
 }
 
@@ -142,22 +144,34 @@ function startClock() {
     //check if game has ended
     if(state.timeElapsed === state.gameLenght){
         //when game ended, alert player WPM
-        alert("Game Over, WPM is: " + wpmDisplay.textContent);
+        document.getElementById("result").className = "flex";
+        document.getElementById("main-section").className = "hide";
+        statsContent.className = "hide";
+        mainContent.className = "hide";
+        input.className = "hide";
+        textDisplay.className = "hide";
+
+
+
+
+        endScore.textContent = state.score;
+        endWPM.textContent = (state.score * 60 / 45).toFixed(2);
 
         const scores = JSON.parse(localStorage.getItem("highscores")) || [];
 
         scores.push(wpmDisplay.textContent);
 
         scores.sort();
+        localStorage.setItem("highscores", JSON.stringify(scores));
+
 
         if(scores.length > 5) {
             scores.shift();
         }
 
-        localStorage.setItem("highscores", JSON.stringify(scores));
-    
-        //refresh the page
-        window.location.reload();
+
     }
     }, 1000);
 }
+
+

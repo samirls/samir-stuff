@@ -30,8 +30,8 @@
             <!-- typed words go here -->
             <article id="main-content"></article>
             <div id="flags">
-                <img id="button" type="submit" src="./img/usa-flag.png"/>
-                <img id="button2" src="./img/brazil-flag.png"/>
+                <img id="usaFlag" type="submit" src="./img/usa-flag.png"/>
+                <img id="button2" title="coming soon" src="./img/brazil-flag.png"/>
             </div>
             
 
@@ -43,13 +43,13 @@
             <form id="form">
                 <input class="hide" id="input" type="text" />
             </form>
-            <a href="./index.html" class="hide" id="backButton"><button>Back to Home</button></a>
+            <a href="./index.html" class="hide" id="backButton"><button>Cancel This Run</button></a>
         </section>
     </main>
     <div id="result" class="hide">
-        <div>Game Over!</div>
-        <div>You have made <span id="wpm-display"></span> words per minute!</div>
-        <div>You have typed <span id="score-display"></span> words!</div>
+        <div>Game Over</div>
+        <div>You have made <span id="endWPM"></span> words per minute!</div>
+        <div>You have typed <span id="endScore"></span> words!</div>
         <button id="goBack">Go Back</button>
 
     </div>
